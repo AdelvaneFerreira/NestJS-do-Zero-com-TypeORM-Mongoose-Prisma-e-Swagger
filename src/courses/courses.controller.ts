@@ -1,10 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('courses')
+@Controller()
 export class CoursesController {
-
-    @Get()
-    findAll(): string {
-        return 'Listar todos';
-    }
+  @Get('courses')
+  findAll() {
+    return 'Listagem de cursos';
+  }
 }
