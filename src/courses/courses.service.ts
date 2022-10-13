@@ -22,11 +22,12 @@ export class CoursesService {
         if(!course){
             throw new HttpException(`Course ${id} not found`, HttpStatus.NOT_FOUND);
         }
-        return courses;
+        return this.courses;
     }
 
     create(createCourseDto: any){
         this.courses.push(createCourseDto);
+        return createCourseDto;
     }
 
     update(id: string, updateCourseDto: any){
